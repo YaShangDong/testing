@@ -1,5 +1,7 @@
 language: php
 
+dist: bionic
+
 cache:
   directories:
     - $HOME/.composer/cache
@@ -17,10 +19,10 @@ env:
   # - PYGMENTS_VERSION=2.6
   - PYGMENTS_VERSION=2.7
 
-addons:
-  apt:
-    packages:
-      - python3
+# addons:
+#   apt:
+#     packages:
+#       - python3
 
 before_install:
   - pip install --upgrade pip
