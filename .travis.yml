@@ -22,7 +22,7 @@ env:
 addons:
   apt:
     packages:
-      - python3-pip3
+      - python3-pip
 
 # before_install:
 #   - python3 -m pip install --upgrade pip
