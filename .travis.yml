@@ -17,6 +17,9 @@ env:
   - PYGMENTS_VERSION=2.6
   - PYGMENTS_VERSION=2.7
 
+before_install:
+  - pip install --upgrade pip
+
 install:
   - travis_retry pip install Pygments==$PYGMENTS_VERSION
   - travis_retry composer install --prefer-dist --no-interaction
