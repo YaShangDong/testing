@@ -19,16 +19,16 @@ env:
   # - PYGMENTS_VERSION=2.6
   - PYGMENTS_VERSION=2.7
 
-# addons:
-#   apt:
-#     packages:
-#       - python3
+addons:
+  apt:
+    packages:
+      - python3-pip3
 
-before_install:
-  - python3 -m pip install --upgrade pip
+# before_install:
+#   - python3 -m pip install --upgrade pip
 
 install:
-  - travis_retry pip install Pygments==$PYGMENTS_VERSION
+  - travis_retry pip3 install Pygments==$PYGMENTS_VERSION
   - travis_retry composer install --prefer-dist --no-interaction
 
 script:
