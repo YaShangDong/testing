@@ -32,4 +32,4 @@ install:
   - travis_retry composer install --prefer-dist --no-interaction
 
 script:
-  - phpunit --coverage-text --coverage-clover=build/coverage.xml
+  - vendor/bin/phpunit --coverage-text --coverage-clover=build/coverage.xml
