@@ -7,7 +7,8 @@ use YaSD\Pygments\Pygments;
 
 class PygmentsTest extends TestCase
 {
-    protected Pygments $pygments;
+    /** @var Pygments */
+    protected $pygments;
 
     protected function setUp(): void
     {
