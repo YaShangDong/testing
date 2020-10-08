@@ -24,8 +24,11 @@ use Symfony\Component\Process\Process;
  */
 class Pygments
 {
-    protected string $pygmentize;
-    protected array $args;
+    /** @var string */
+    protected $pygmentize;
+
+    /** @var array */
+    protected $args;
 
     /**
      * Constructor
