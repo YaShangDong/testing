@@ -8,14 +8,19 @@ php:
   - 7.4
 
 env:
-  - PYGMENTS_VERSION=2.0
-  - PYGMENTS_VERSION=2.1
-  - PYGMENTS_VERSION=2.2
-  - PYGMENTS_VERSION=2.3
-  - PYGMENTS_VERSION=2.4
-  - PYGMENTS_VERSION=2.5
-  - PYGMENTS_VERSION=2.6
+  # - PYGMENTS_VERSION=2.0
+  # - PYGMENTS_VERSION=2.1
+  # - PYGMENTS_VERSION=2.2
+  # - PYGMENTS_VERSION=2.3
+  # - PYGMENTS_VERSION=2.4
+  # - PYGMENTS_VERSION=2.5
+  # - PYGMENTS_VERSION=2.6
   - PYGMENTS_VERSION=2.7
+
+addons:
+  apt:
+    packages:
+      - python3
 
 before_install:
   - pip install --upgrade pip
