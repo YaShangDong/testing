@@ -5,13 +5,21 @@ cache:
     - $HOME/.composer/cache
 
 php:
-  - 7.1
-  - 7.2
-  - 7.3
   - 7.4
 
+env:
+  - PYGMENTS_VERSION=2.0
+  - PYGMENTS_VERSION=2.1
+  - PYGMENTS_VERSION=2.2
+  - PYGMENTS_VERSION=2.3
+  - PYGMENTS_VERSION=2.4
+  - PYGMENTS_VERSION=2.5
+  - PYGMENTS_VERSION=2.6
+  - PYGMENTS_VERSION=2.7
+
 install:
-  - travis_retry composer install
+  - travis_retry pip install Pygments==$PYGMENTS_VERSION
+  - travis_retry composer install --prefer-dist --no-interaction
 
 script:
-  - phpunit
+  - phpunit --coverage-text --coverage-clover=build/coverage.xml
