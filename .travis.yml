@@ -7,6 +7,8 @@ cache:
     - $HOME/.composer/cache
 
 php:
+  - 7.2
+  - 7.3
   - 7.4
 
 env:
@@ -14,18 +16,15 @@ env:
   # - PYGMENTS_VERSION=2.1
   # - PYGMENTS_VERSION=2.2
   # - PYGMENTS_VERSION=2.3
-  # - PYGMENTS_VERSION=2.4
-  # - PYGMENTS_VERSION=2.5
-  # - PYGMENTS_VERSION=2.6
+  - PYGMENTS_VERSION=2.4
+  - PYGMENTS_VERSION=2.5
+  - PYGMENTS_VERSION=2.6
   - PYGMENTS_VERSION=2.7
 
 addons:
   apt:
     packages:
       - python3-pip
-
-# before_install:
-#   - python3 -m pip install --upgrade pip
 
 install:
   - travis_retry pip3 install Pygments==$PYGMENTS_VERSION
